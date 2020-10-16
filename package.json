@@ -1,0 +1,63 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://atasoyfurkan.github.io/bluemark-demo",
+  "engines": {
+    "npm": "6.9.0",
+    "node": "v10.16.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.1",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "bootstrap-daterangepicker": "^3.0.5",
+    "firebase": "^7.9.1",
+    "firebaseui": "^4.4.0",
+    "font-awesome": "^4.7.0",
+    "joi-browser": "^13.4.0",
+    "moment": "^2.24.0",
+    "qrcode.react": "^1.0.0",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-form-error": "^1.0.6",
+    "react-multiple-datepicker": "^0.1.0",
+    "react-notify-bootstrap": "^1.0.18",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-select": "^3.0.8",
+    "read-excel-file": "^4.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
