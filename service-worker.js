@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bluemark-demo/precache-manifest.244b52674c4d104ae2c44b06ccc69ac2.js"
+  "/bluemark-demo/precache-manifest.bc555c7a682c34d671ed6fc57266cab3.js"
 );
 
 self.addEventListener('message', (event) => {

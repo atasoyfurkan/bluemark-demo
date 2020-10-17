@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bluemark-demo/static/css/main.88649b66.chunk.css",
-    "main.js": "/bluemark-demo/static/js/main.2fa82ca3.chunk.js",
-    "main.js.map": "/bluemark-demo/static/js/main.2fa82ca3.chunk.js.map",
+    "main.js": "/bluemark-demo/static/js/main.675d5a28.chunk.js",
+    "main.js.map": "/bluemark-demo/static/js/main.675d5a28.chunk.js.map",
     "runtime-main.js": "/bluemark-demo/static/js/runtime-main.77b567a3.js",
     "runtime-main.js.map": "/bluemark-demo/static/js/runtime-main.77b567a3.js.map",
     "static/css/2.33e1d9d4.chunk.css": "/bluemark-demo/static/css/2.33e1d9d4.chunk.css",
     "static/js/2.7247bb52.chunk.js": "/bluemark-demo/static/js/2.7247bb52.chunk.js",
     "static/js/2.7247bb52.chunk.js.map": "/bluemark-demo/static/js/2.7247bb52.chunk.js.map",
     "index.html": "/bluemark-demo/index.html",
-    "precache-manifest.244b52674c4d104ae2c44b06ccc69ac2.js": "/bluemark-demo/precache-manifest.244b52674c4d104ae2c44b06ccc69ac2.js",
+    "precache-manifest.bc555c7a682c34d671ed6fc57266cab3.js": "/bluemark-demo/precache-manifest.bc555c7a682c34d671ed6fc57266cab3.js",
     "service-worker.js": "/bluemark-demo/service-worker.js",
     "static/css/2.33e1d9d4.chunk.css.map": "/bluemark-demo/static/css/2.33e1d9d4.chunk.css.map",
     "static/css/main.88649b66.chunk.css.map": "/bluemark-demo/static/css/main.88649b66.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.33e1d9d4.chunk.css",
     "static/js/2.7247bb52.chunk.js",
     "static/css/main.88649b66.chunk.css",
-    "static/js/main.2fa82ca3.chunk.js"
+    "static/js/main.675d5a28.chunk.js"
   ]
 }

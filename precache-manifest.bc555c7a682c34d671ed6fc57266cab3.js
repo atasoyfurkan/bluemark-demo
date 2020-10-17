@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d4fa4e979b4b4c7269ba251f1fadb093",
+    "revision": "97eff8c0f99c19742cd2306ea9168199",
     "url": "/bluemark-demo/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bluemark-demo/static/css/2.33e1d9d4.chunk.css"
   },
   {
-    "revision": "2edd1f30e300e813520b",
+    "revision": "d13a7dc2973b5b938a2c",
     "url": "/bluemark-demo/static/css/main.88649b66.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bluemark-demo/static/js/2.7247bb52.chunk.js.LICENSE"
   },
   {
-    "revision": "2edd1f30e300e813520b",
-    "url": "/bluemark-demo/static/js/main.2fa82ca3.chunk.js"
+    "revision": "d13a7dc2973b5b938a2c",
+    "url": "/bluemark-demo/static/js/main.675d5a28.chunk.js"
   },
   {
     "revision": "b9ce0a5aedadcf1314b1",
