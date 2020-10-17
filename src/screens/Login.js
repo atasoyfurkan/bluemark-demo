@@ -85,10 +85,14 @@ class Login extends FormClass {
                       aria-hidden="true"
                     ></span>
                   ) : (
-                    "Giriş yap"
-                  )}
+                      "Giriş yap"
+                    )}
                 </button>
               </form>
+              <p className="mt-4">
+                Demo E-posta: demo@gmail.com <br />
+                Demo Sifre: 1234567
+              </p>
             </div>
           </div>
         </div>
