@@ -28,7 +28,7 @@
     "react-dom": "^16.12.0",
     "react-form-error": "^1.0.6",
     "react-multiple-datepicker": "^0.1.0",
-    "react-notify-bootstrap": "^1.0.18",
+    "react-notify-bootstrap": "^1.0.23",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "react-select": "^3.0.8",

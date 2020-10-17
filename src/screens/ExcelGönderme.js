@@ -19,7 +19,7 @@ export default class ExcelGönderme extends React.Component {
         super(props);
     }
     fileOnChange = async () => {
-        try{
+        try {
             let file = this.state.fileInput.current.files[0];
             await this.setState({ label: file.name });
             const rows = await readXlsxFile(file)
@@ -45,56 +45,58 @@ export default class ExcelGönderme extends React.Component {
         }
     }
     sendCertificate = async i => {
-        try {
-            await this.setState(prev => ({
-                data: prev.data.map((c, index) => {
-                    if (i === index) {
-                        return ({
-                            ...c,
-                            durum: "Sertifika gönderiliyor",
-                            renk: "Yellow"
-                        })
-                    }
-                    else return c
-                })
-            }));
-            let katilimci = this.state.data[i]
-            const url = encodeURI(this.apiTemplate(katilimci.name, katilimci.id, katilimci.tarih, katilimci.egitim, katilimci.mail))
-            let { data } = await axios.get(url)
-            if (data.accepted.length === 1) {
-                await this.setState(prev => ({
-                    data: prev.data.map((c, index) => {
-                        if (i === index) {
-                            return ({
-                                ...c,
-                                durum: "Sertifika başarıyla gönderildi",
-                                renk: "Green"
-                            })
-                        }
-                        else return c
-                    })
-                }));
-            }
-            else throw new Error("")
-        } catch (e) {
-            console.log(e)
-            notify({
-                variant: "danger",
-                text: "Beklenmedik bir hata gerçekleşti"
-            });
-            await this.setState(prev => ({
-                data: prev.data.map((c, index) => {
-                    if (i === index) {
-                        return ({
-                            ...c,
-                            durum: "Bir hata gerçekleşti",
-                            renk: "Red"
-                        })
-                    }
-                    else return c
-                })
-            }));
-        }
+        notify({ variant: "danger", text: "Demo surumunde sertifika gonderilemez" })
+
+        // try {
+        //     await this.setState(prev => ({
+        //         data: prev.data.map((c, index) => {
+        //             if (i === index) {
+        //                 return ({
+        //                     ...c,
+        //                     durum: "Sertifika gönderiliyor",
+        //                     renk: "Yellow"
+        //                 })
+        //             }
+        //             else return c
+        //         })
+        //     }));
+        //     let katilimci = this.state.data[i]
+        //     const url = encodeURI(this.apiTemplate(katilimci.name, katilimci.id, katilimci.tarih, katilimci.egitim, katilimci.mail))
+        //     let { data } = await axios.get(url)
+        //     if (data.accepted.length === 1) {
+        //         await this.setState(prev => ({
+        //             data: prev.data.map((c, index) => {
+        //                 if (i === index) {
+        //                     return ({
+        //                         ...c,
+        //                         durum: "Sertifika başarıyla gönderildi",
+        //                         renk: "Green"
+        //                     })
+        //                 }
+        //                 else return c
+        //             })
+        //         }));
+        //     }
+        //     else throw new Error("")
+        // } catch (e) {
+        //     console.log(e)
+        //     notify({
+        //         variant: "danger",
+        //         text: "Beklenmedik bir hata gerçekleşti"
+        //     });
+        //     await this.setState(prev => ({
+        //         data: prev.data.map((c, index) => {
+        //             if (i === index) {
+        //                 return ({
+        //                     ...c,
+        //                     durum: "Bir hata gerçekleşti",
+        //                     renk: "Red"
+        //                 })
+        //             }
+        //             else return c
+        //         })
+        //     }));
+        // }
     }
     render() {
         return (

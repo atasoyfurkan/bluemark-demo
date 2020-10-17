@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding, faEnvelope, faMobile, faUser } from "@fortawesome/free-solid-svg-icons";
 import Joi from "joi-browser";
 import { notify } from "react-notify-bootstrap";
-import {Error, FormHandler} from "react-form-error";
+import { Error, FormHandler } from "react-form-error";
 import axios from 'axios'
 export default class SertifikaModal extends React.Component {
     state = {
@@ -34,27 +34,30 @@ export default class SertifikaModal extends React.Component {
         super(props);
     }
     doSubmit = async () => {
-        if(FormHandler.checkError())return
-        try {
-            const url = encodeURI(this.apiTemplate(this.state.data.ad + " " + this.state.data.soyad, this.state.data.id, this.state.data.date, this.state.data.course_name, this.state.data.email))
-            this.onHide()
-            notify({
-                variant: "warning",
-                text: "Sertifika gönderiliyor"
-            });
-            let { data } = await axios.get(url)
-            if (data.accepted.length === 1) {
-                notify({
-                    variant: "success",
-                    text: "Sertifika başarıyla gönderildi"
-                });
-            }
-        } catch (e) {
-            notify({
-                variant: "danger",
-                text: "Beklenmedik bir hata gerçekleşti"
-            });
-        }
+        if (FormHandler.checkError()) return;
+
+        notify({ variant: "danger", text: "Demo surumunde sertifika gonderilemez" })
+
+        // try {
+        //     const url = encodeURI(this.apiTemplate(this.state.data.ad + " " + this.state.data.soyad, this.state.data.id, this.state.data.date, this.state.data.course_name, this.state.data.email))
+        //     this.onHide()
+        //     notify({
+        //         variant: "warning",
+        //         text: "Sertifika gönderiliyor"
+        //     });
+        //     let { data } = await axios.get(url)
+        //     if (data.accepted.length === 1) {
+        //         notify({
+        //             variant: "success",
+        //             text: "Sertifika başarıyla gönderildi"
+        //         });
+        //     }
+        // } catch (e) {
+        //     notify({
+        //         variant: "danger",
+        //         text: "Beklenmedik bir hata gerçekleşti"
+        //     });
+        // }
     };
     onChange = event => {
 
@@ -88,8 +91,8 @@ export default class SertifikaModal extends React.Component {
         }
     };
     translator = error => {
-        if(error === null) return
-        if(error.startsWith('"email"')) return "Lütfen geçerli bir e-mail girin"
+        if (error === null) return
+        if (error.startsWith('"email"')) return "Lütfen geçerli bir e-mail girin"
         return "Bu alan boş bırakılamaz."
     }
 
@@ -132,7 +135,7 @@ export default class SertifikaModal extends React.Component {
                                     placeholder="Adı"
                                 />
                             </div>
-                            <Error name={"ad"}/>
+                            <Error name={"ad"} />
                         </div>
                         <div className="form-group">
                             <div className="input-group">
@@ -149,7 +152,7 @@ export default class SertifikaModal extends React.Component {
                                     placeholder="Soyadı"
                                 />
                             </div>
-                            <Error name={"soyad"}/>
+                            <Error name={"soyad"} />
                         </div>
                         <div className="form-group">
                             <div className="input-group">
@@ -166,7 +169,7 @@ export default class SertifikaModal extends React.Component {
                                     placeholder="E-posta adresi"
                                 />
                             </div>
-                            <Error name={"email"}/>
+                            <Error name={"email"} />
                         </div>
                         <div className="form-group">
                             <div className="input-group">
@@ -183,7 +186,7 @@ export default class SertifikaModal extends React.Component {
                                     placeholder="Enrollment Id"
                                 />
                             </div>
-                            <Error name={"id"}/>
+                            <Error name={"id"} />
                         </div>
                         <div className="form-group">
                             <div className="input-group">
@@ -200,7 +203,7 @@ export default class SertifikaModal extends React.Component {
                                     placeholder="Tarih"
                                 />
                             </div>
-                            <Error name={"date"}/>
+                            <Error name={"date"} />
                         </div>
                         <div className="form-group">
                             <div className="input-group">
@@ -217,9 +220,9 @@ export default class SertifikaModal extends React.Component {
                                     placeholder="Eğitim Adı"
                                 />
                             </div>
-                            <Error name={"course_name"}/>
+                            <Error name={"course_name"} />
                         </div>
-                        <FormHandler schema={this.schema} data={this.state.data} translator={this.translator}/>
+                        <FormHandler schema={this.schema} data={this.state.data} translator={this.translator} />
 
                     </Modal.Body>
                     <Modal.Footer>
