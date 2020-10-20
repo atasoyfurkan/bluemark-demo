@@ -6,6 +6,7 @@ import { url } from "../config.json";
 class MusteriSecmeModal extends Component {
   handleClick = () => {
     window.location = url + this.props.link;
+    window.location.reload();
   };
 
   render() {

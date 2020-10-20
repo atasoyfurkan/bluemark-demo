@@ -53,22 +53,24 @@ export default class EgitimTipi extends React.Component {
   }
 
   mailGonder = async _ => {
-    const mailName = this.props.egitim.egitmen.email;
-    const courseName = this.props.egitim.egitimTipi.ad;
-    const egitimLink = `${url}/gunluk-yoklama/${this.props.egitim.id}/egitmen`;
-    const { href } = new URL(`https://bluemark-server.herokuapp.com/egitmenmail?link=${egitimLink}&email=${mailName}&course_name=${courseName}`);
+    notify({ variant: "danger", text: "Demo surumunde mail gonderilemez" });
 
-    try {
-      notify({
-        variant: "warning", text: "Mail gönderiliyor"
-      });
-      await axios.get(href);
-      notify({
-        variant: "success", text: "Mail başarıyla gönderildi"
-      });
-    } catch (error) {
-      notify({ variant: "danger", text: "Mail gönderilemedi" });
-    }
+    // const mailName = this.props.egitim.egitmen.email;
+    // const courseName = this.props.egitim.egitimTipi.ad;
+    // const egitimLink = `${url}/gunluk-yoklama/${this.props.egitim.id}/egitmen`;
+    // const { href } = new URL(`https://bluemark-server.herokuapp.com/egitmenmail?link=${egitimLink}&email=${mailName}&course_name=${courseName}`);
+
+    // try {
+    //   notify({
+    //     variant: "warning", text: "Mail gönderiliyor"
+    //   });
+    //   await axios.get(href);
+    //   notify({
+    //     variant: "success", text: "Mail başarıyla gönderildi"
+    //   });
+    // } catch (error) {
+    //   notify({ variant: "danger", text: "Mail gönderilemedi" });
+    // }
 
   }
 
